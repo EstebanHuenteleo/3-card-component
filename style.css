@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+:root {
+    /* Typography */
+    --font-family-big-shoulder: 'Big Shoulders Display', cursive;
+    --font-family-lexend-deca: 'Lexend Deca', sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    /* Colors */
+    /* Primary */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    /* Neutral */
+    /* !(paragraphs) */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* ! (background, headings, buttons) */
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+h1{
+    color: var(--Transparent-white);
+    font-family: var(--font-family-big-shoulder);
+    font-weight: var(--font-weight-bold);
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+p{
+    color:var(--Transparent-white);
+    font-family: var(--font-family-lexend-deca);
+}
+button{
+    border: none;
+    width: 150px;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: var(--Very-light-gray);
+}
+button a{
+    color: var(--Bright-orange);
+    text-decoration: none;
+}
+
+.container-cards{
+    width: 100%;
+    background-color: var(--Very-light-gray);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: max-content;
+    padding: 20px 10px;
+    
+}
+.card{
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-basis: 450px;
+}
+.card-1{
+    background-color: var(--Bright-orange);
+    border-radius: 10px 10px 0 0;
+}
+.card-2 {
+    background-color: var(--Dark-cyan);
+}
+.card-3 {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+img {
+    width: 20%;
+}
+
+@media (min-width:1440px) {
+    .container-cards{
+        flex-direction: row;
+        text-align: left;
+        height: max-content;
+        padding: 20px 10px;
+        align-items: center;
+        justify-content: center;
+        height: 98vh;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-basis: 400px;
+        height: 450px;
+    }
+    .card-1{
+        background-color: var(--Bright-orange);
+        border-radius: 10px 0 0 10px;
+    }
+    .card-3{
+        border-radius: 0 10px 10px 0;
+    }
+}
